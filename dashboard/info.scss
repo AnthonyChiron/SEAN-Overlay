@@ -1,0 +1,63 @@
+body {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+button,
+select {
+  font-family: "Roboto";
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.start {
+  background-color: rgb(44, 177, 27);
+  color: white;
+  font-weight: 900;
+}
+
+.start:hover {
+  background-color: rgb(36, 136, 22);
+}
+
+.stop {
+  background-color: rgb(179, 39, 21);
+  color: white;
+  font-weight: 900;
+}
+
+.stop:hover {
+  background-color: rgb(122, 31, 19);
+}
+
+.reset {
+  background-color: rgb(255, 202, 28);
+  color: white;
+  font-weight: 900;
+}
+
+.reset:hover {
+  background-color: rgb(224, 186, 14);
+}
+
+.cat1 {
+}
+
+.cat2 {
+  display: block;
+  margin-top: 20px;
+}

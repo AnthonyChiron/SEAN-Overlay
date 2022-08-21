@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sean-production",
+  "private_key_id": "b5556aa573313f4fab8c42e1404ae476f8d3c6cf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDjk5WwgWEFzILi\naYPuGNtVM3DvCRBByqGqqnYTJEs3ZsaQVDmmSv97uHovqyymDrdBTNq4Akk/r5N0\n5Y1i65u6L7ospBwgEBUP5mwtvKvVhQR836dPr0J3VSn8BjgM1Q6THfEM9/DNvGgV\n9j2ktg7reIoVxzu/OIOUKOzAxD0npG1Px6/RsDglhmgG8UJ/y6j50TznjHJHC26S\nHCEweYXjrCgQYqF1TsORG/HICnJfVRztNQc8tqSjj2rQtxF3WSfmdtoymvkOaMtU\nSD5zA1K/9j43GPIunu/Wb16acKi+X0idZ4YeFfzHrY9PY7K35A8kBfLNFWlwzeIt\n5NU4ShKBAgMBAAECggEACRVKJ3QWgwR9YduLxjxMPsuRkZzXPwT/LGBm2486iFDM\nEpUmAubh6RZ9G/t1SgBy3IKchTUkJsxTcpo56S2VttnyUJdRPw9dQ9fyz+WEpz5K\nplBH7YSFft1RkmtOH+b+EK2kghvASvne3qeIINOaZ1gVjNZ5okF3cPmsL2p1tWgF\npxuOoOAHQfsL0e1cEF6InE6p95sGfBsVZPPMNg9L0tXK3SSGl3Ahif9fZIg8hu2w\nphjoxG8I6/ee9r5Jb2p1JON3GYHeDzAMk/kBwk8EM7RAFoCeDGkL8F/n7NNKnHnk\nLt9XCOwNQmCbZt81R4VFVw4bQknUY+vGPhXlZM1REQKBgQDz26rOhlwr5yu9/GWV\nBsZ5FKPEXdr6U7GagUSpfIpJ5R9+v9ixLRigNBdEy/KutyO5asvyvcWqUH7uh63r\nQ3gxg9xyrxuIIIwSfoZ7/zI1i5WyxRxPTaWPwg8a6T69P91HqpNEpgF4G+QLVTQc\ngf1/vjnox26fx+cbG5z9wSHhWQKBgQDu6GJ9kpw8yRop7wblKX4Oj+H2d+5I/DnN\nBAbLqeb50n9IaBAFLjrjE1TwU+SSuyI8aD/XdzRf4zJBxeqF+MbNGYJOKxnlVqs/\nc4NL85T5BUIN8++2bOR+vqI/XQG5zLRj90FjbaYOQcJxEPQ9M3k0nfRUjzKAk4aI\nQOCE0ggtaQKBgFSbOE3jTANnd0O5WD02VpIX2SH+NkV32Dz08K+lKA2vUxgU08fV\nD6A1soUKBa8cl2ZzaUNVGEmZGBEGPg9MH11+lHOt0W2PbUnVYC+RQQhW359gyAuz\nsueHutnpZv0eNVXyFppQxl23v403CJeDekJh65GZ8AW7w7EiCXv5EBoxAoGAaxrp\nlMxWmPW7chND7xbj+ZlNv1ZTEItrSltExKed8mAJSifFDt2D7utqx/eEYLfeiGBg\nRrOdWmOb01rsYjV+wtJt1aeDC4sIaQDbWwCPx/gwfdrfm9RDuAK08F08+dQpBywB\nN5cfvAKFLnVgWdOqwgkSUZqFFJmO1aToQwN6QQkCgYBibKy1gOYT/TdwWR2T6Nw1\nZTgj2PLHNiR24bK2iuXXTxo3umSFzo1w/psGGFocKdoKHJP4n3a+MfDm/UwUhrqg\nClNNU34dcu8LeXPUjtzpcwK9h0laiKeXujg+w6RDaxewJ6Ebsv98MFYT4RhyIhnF\nxdGhUoOsm0JyI4L/oGJV/w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sean-drive@sean-production.iam.gserviceaccount.com",
+  "client_id": "103522258026558930530",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sean-drive%40sean-production.iam.gserviceaccount.com"
+}
