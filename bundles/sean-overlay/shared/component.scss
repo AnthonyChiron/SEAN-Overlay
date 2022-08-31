@@ -1,0 +1,61 @@
+body {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+button,
+select {
+  font-family: "Roboto";
+  font-weight: 300;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.primary {
+  background-color: rgb(65, 255, 40);
+  color: rgba(0, 0, 0, 0.699);
+  font-weight: 500;
+}
+
+.primary:hover {
+  background-color: rgb(60, 226, 38);
+}
+
+.danger {
+  background-color: rgb(233, 48, 23);
+  color: rgba(0, 0, 0, 0.699);
+  font-weight: 500;
+}
+
+.danger:hover {
+  background-color: rgb(212, 51, 30);
+}
+
+.warning {
+  background-color: rgb(255, 240, 35);
+  color: rgba(0, 0, 0, 0.699);
+  font-weight: 500;
+}
+
+.warning:hover {
+  background-color: rgb(245, 223, 22);
+}
+
+.cat2 {
+  display: block;
+  margin-top: 20px;
+}

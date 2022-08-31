@@ -1,0 +1,84 @@
+{
+  "name": "sean-overlay",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "description": "Overlays pour la compétition de sport extrêmes",
+  "homepage": "",
+  "author": {
+    "name": "Anthony CHIRON",
+    "email": "anthony.chiron@outlook.fr",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "assetCategories": [
+      {
+        "name": "thumbnails",
+        "title": "Thumbnails",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "gif",
+          "png"
+        ]
+      },
+      {
+        "name": "boxart",
+        "title": "Boxart",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "gif",
+          "png"
+        ]
+      }
+    ],
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "Info",
+        "title": "Bloc info",
+        "width": 4,
+        "file": "info/info.html",
+        "headerColor": "#525F78",
+        "workspace": "SEAN"
+      },
+      {
+        "name": "Data handler",
+        "title": "Gestion des données",
+        "width": 2,
+        "file": "data-handler/data-handler.html",
+        "headerColor": "#525F78",
+        "workspace": "SEAN"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "info.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@elgato-stream-deck/node": "^5.5.0",
+    "bootstrap": "^5.2.0",
+    "countdown": "^2.6.0",
+    "elgato-stream-deck": "^4.2.1",
+    "google-spreadsheet": "^3.3.0",
+    "googleapis": "^39.2.0",
+    "requirejs": "^2.3.6",
+    "streamdeck-util": "^0.4.0"
+  }
+}

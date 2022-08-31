@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet/less" type="text/css" href="info.scss" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="info.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>TIMER</title>
+    <style>
+      .monospace {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gestion des informations du contest</h1>
+
+    <div class="cat1">
+      <h2>Informations générale</h2>
+      <button class="start" onclick="refreshCategorie()">Refresh data</button>
+      <button class="start" onclick="displayCompetitionInfo()">Display</button>
+      <button class="stop" onclick="hideCompetitionInfo()">Hide</button>
+      <div class="cat2">
+        <label for="competitionStepSelect">Etape</label>
+        <select id="competitionStepSelect" onchange="updateCompetitionStep()">
+          <option value="QUALIF">Qualification</option>
+          <option value="FINAL">Finale</option>
+        </select>
+        <label for="competitionCategorieSelect">Catégorie</label>
+        <select
+          id="competitionCategorieSelect"
+          onchange="updateCompetitionCategorie()"
+        ></select>
+      </div>
+    </div>
+
+    <div class="cat1">
+      <h2>Timer</h2>
+      <button class="start" onclick="timerStart()">Start timer</button>
+      <button class="stop" onclick="timerStop()">Stop timer</button>
+      <button class="reset" onclick="timerReset()">Reset timer</button>
+      <select id="timerCountSelect" onchange="updateTimerCount()">
+        <option value="45" selected>45s</option>
+        <option value="50">50s</option>
+        <option value="55">55s</option>
+      </select>
+    </div>
+
+    <div class="cat1">
+      <h2>Run</h2>
+      <button class="start" onclick="updateRun('RUN 1/2')">Run 1</button>
+      <button class="start" onclick="updateRun('RUN 2/2')">Run 2</button>
+      <button class="start" onclick="updateRun('LAST TRICK')">
+        Last Trick
+      </button>
+    </div>
+
+    <div class="cat1">
+      <h2>Poules de rider</h2>
+      <button class="start" onclick="refreshPool()">Refresh pool</button>
+      <button class="start" onclick="displayPool()">Display pool</button>
+      <button class="stop" onclick="hidePool()">Hide pool</button>
+      <select id="poolSelect" onchange="updateSelectedPool()"></select>
+    </div>
+  </body>
+</html>
