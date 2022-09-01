@@ -45,25 +45,33 @@
     "compatibleRange": "^1.1.1",
     "dashboardPanels": [
       {
-        "name": "Info",
-        "title": "Bloc info",
+        "name": "Data handler",
+        "title": "Affichage des riders",
         "width": 4,
-        "file": "info/info.html",
+        "file": "dashboard-riders/dashboard-riders.html",
         "headerColor": "#525F78",
         "workspace": "SEAN"
       },
       {
-        "name": "Data handler",
-        "title": "Gestion des données",
-        "width": 2,
-        "file": "data-handler/data-handler.html",
+        "name": "Info",
+        "title": "Informations principal",
+        "width": 4,
+        "file": "dashboard-info/dashboard-info.html",
+        "headerColor": "#525F78",
+        "workspace": "SEAN"
+      },
+      {
+        "name": "Timer",
+        "title": "Timer",
+        "width": 4,
+        "file": "dashboard-timer/dashboard-timer.html",
         "headerColor": "#525F78",
         "workspace": "SEAN"
       }
     ],
     "graphics": [
       {
-        "file": "info.html",
+        "file": "info/info.html",
         "width": 1920,
         "height": 1080
       }

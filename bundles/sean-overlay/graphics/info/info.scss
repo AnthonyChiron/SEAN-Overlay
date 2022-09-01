@@ -1,0 +1,103 @@
+.bloc {
+	display: flex;
+	position: absolute;
+	font-family: "Roboto";
+	top: 10%;
+	left: 50%;
+	flex-direction: column;
+	transition: 0.8s;
+	width: 200px;
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		animation: slide-up 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+		.step {
+			color: #54929b;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: white;
+
+			h2 {
+				flex: 1;
+				text-align: center;
+				margin: 5px;
+				font-size: 20px;
+				font-weight: 500;
+			}
+		}
+
+		.compet {
+			display: flex;
+			background-color: #54929b;
+			color: white;
+			margin-bottom: 10px;
+
+			h2 {
+				border: 1px solid white;
+				flex: 1;
+				text-align: center;
+				margin: 0;
+				font-size: 15px;
+				padding: 5px;
+			}
+
+			.competitionCategorie {
+				animation: fade-in-top 0.5s both;
+			}
+		}
+	}
+
+	.slide {
+		animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	}
+
+	.timer {
+		display: flex;
+		color: black;
+		transition: 0.05s;
+
+		p {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			flex: 1;
+			height: 50px;
+		}
+
+		.timer-label {
+			background-image: url("back_NRF.png");
+			background-size: 100%;
+			color: white;
+			text-shadow: 0 0 5px #c1640e;
+			font-weight: 900;
+			font-size: 27px;
+		}
+
+		.timer-timer {
+			background-color: white;
+			color: #c1640e;
+			font-weight: 300;
+			font-size: 30px;
+		}
+	}
+
+	.show {
+		animation: scale-in-ver-bottom 0.4s both;
+	}
+
+	.hide {
+		animation: scale-out-ver-bottom 0.4s both;
+	}
+
+	.hide-delay {
+		animation: scale-out-ver-bottom 0.4s both;
+		animation-delay: 1s;
+	}
+}
+
+.stop {
+	transform: scale3d(1, 0, 0);
+}
