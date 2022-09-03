@@ -1,13 +1,13 @@
 const competitionStep = nodecg.Replicant("selectedCompetitionStep");
-const competitionCategorie = nodecg.Replicant("selectedCompetitionCategorie");
+const selectedCategorie = nodecg.Replicant("selectedCategorie");
 const run = nodecg.Replicant("selectedRun");
 
 competitionStep.on("change", (newValue) => {
 	document.getElementById("competitionStep").innerHTML = newValue;
 });
 
-competitionCategorie.on("change", (newValue) => {
-	document.getElementById("competitionCategorie").innerHTML = newValue;
+selectedCategorie.on("change", (newValue) => {
+	document.getElementById("selectedCategorie").innerHTML = newValue;
 });
 
 run.on("change", (newValue) => {

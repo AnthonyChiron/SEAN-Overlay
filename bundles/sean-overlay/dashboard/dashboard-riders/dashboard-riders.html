@@ -7,6 +7,11 @@
 			type="text/css"
 			href="../../shared/component.scss"
 		/>
+		<link
+			rel="stylesheet/less"
+			type="text/css"
+			href="dashboard-riders.scss"
+		/>
 		<script src="https://cdn.jsdelivr.net/npm/less"></script>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -28,16 +33,31 @@
 				<label for="competitionCategorieSelect">Catégorie</label>
 				<select
 					id="competitionCategorieSelect"
-					onchange="updateCompetitionCategorie()"
+					onchange="updateSelectedCategorie()"
 				></select>
 			</div>
 			<div class="select">
-				<label for="competitionCategorieSelect">Pool</label>
+				<label for="competitionPoolSelect">Poule</label>
 				<select
-					id="competitionCategorieSelect"
-					onchange="updateCompetitionPool()"
+					id="competitionPoolSelect"
+					onchange="updateSelectedPool()"
 				></select>
 			</div>
+		</section>
+		<section>
+			<table id="riders" class="riders">
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Prénom</th>
+						<th>Age</th>
+						<th>Poule</th>
+						<th>Score</th>
+						<th>Nationalité</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
 		</section>
 	</body>
 </html>

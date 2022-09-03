@@ -5,47 +5,74 @@ const competitionDocId = "1RiXSAOSUDPoFeKvxC4Eg1V1chi8-qW6mH3putkgXp0E";
 const gmailAccount = "sean-drive@sean-production.iam.gserviceaccount.com";
 
 module.exports = function (nodecg) {
-  const competitionCategorie = nodecg.Replicant("competitionCategorie");
-  const test = nodecg.Replicant("test");
-  const competitionCategorieSelect = nodecg.Replicant(
-    "competitionCategorieSelect"
-  );
+	const competitionCategories = nodecg.Replicant("competitionCategories");
+	const competitionData = nodecg.Replicant("competitionData");
 
-  importCategories();
+	importData();
 
-  nodecg.listenFor("refreshCategorie", async () => {
-    importCategories();
-  });
+	nodecg.listenFor("refreshCategorie", async () => {
+		importCategoriesName();
+		importData();
+	});
 
-  nodecg.listenFor("refreshPool", async () => {
-    importPools();
-  });
+	nodecg.listenFor("refreshPool", async () => {});
 
-  async function importCategories() {
-    doc = await initConnexion();
-    await doc.loadInfo();
+	async function importCategoriesName() {
+		const doc = await initConnexion();
+		await doc.loadInfo();
 
-    tmp = [];
-    for (let index = 0; index < doc.sheetCount; index++) {
-      const element = doc.sheetsByIndex[index];
-      if (element != undefined) tmp.push(element.title);
-    }
-    console.log(tmp);
+		tmp = [];
+		for (let index = 0; index < doc.sheetCount; index++) {
+			const sheet = doc.sheetsByIndex[index];
+			if (sheet != undefined) tmp.push(sheet.title);
+		}
 
-    competitionCategorie.value = tmp;
-  }
+		competitionCategories.value = tmp;
+	}
 
-  async function importPools() {
-    doc = await initConnexion();
-    await doc.loadInfo();
+	async function initConnexion() {
+		const doc = new GoogleSpreadsheet(competitionDocId);
+		await doc.useServiceAccountAuth(creds);
+		await doc.useServiceAccountAuth(creds, gmailAccount);
+		return doc;
+	}
 
-    console.log(competitionCategorieSelect.value);
-  }
+	async function importData() {
+		const doc = await initConnexion();
+		await doc.loadInfo();
 
-  async function initConnexion() {
-    const doc = new GoogleSpreadsheet(competitionDocId);
-    await doc.useServiceAccountAuth(creds);
-    await doc.useServiceAccountAuth(creds, gmailAccount);
-    return doc;
-  }
+		let categories = [];
+		let riders = [];
+
+		// Pour chaque catégories, ajoute tous les riders
+		for (let index = 0; index < doc.sheetCount; index++) {
+			const sheet = doc.sheetsByIndex[index];
+
+			if (sheet) {
+				await importRidersFromCategorie(doc.sheetsByIndex[index]).then(
+					(riders) =>
+						categories.push({ name: sheet.title, riders: riders })
+				);
+			}
+		}
+		competitionData.value = categories;
+		console.log(categories);
+	}
+
+	async function importRidersFromCategorie(sheet) {
+		let riders = [];
+		const rows = await sheet.getRows();
+
+		rows.forEach((row) => {
+			riders.push({
+				lastName: row.Nom,
+				firstName: row.Prénom,
+				age: row.Age,
+				pool: row.Poule,
+				score: row.Score,
+				nat: "fra",
+			});
+		});
+		return riders;
+	}
 };
