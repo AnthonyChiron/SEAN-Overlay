@@ -60,9 +60,19 @@ select {
 .select {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 }
 
 section {
 	margin-top: 10px;
 	display: flex;
+}
+
+.space-around {
+	display: flex;
+	justify-content: space-around;
+}
+
+.block {
+	display: block;
 }

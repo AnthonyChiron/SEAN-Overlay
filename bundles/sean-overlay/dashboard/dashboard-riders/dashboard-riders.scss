@@ -11,3 +11,25 @@ tr {
 	text-align: center;
 	border: white 1px solid;
 }
+
+.large {
+	flex: 3;
+	display: flex;
+
+	select {
+		flex: auto;
+		width: auto;
+	}
+}
+
+.selectedPool {
+	background-color: #525f78;
+	color: white;
+	transition: 0.7s;
+}
+
+.selectedRider {
+	background-color: white;
+	color: #303a4f;
+	transition: 0.7s;
+}
