@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet/less" type="text/css" href="info.scss" />
+		<link rel="stylesheet/less" type="text/css" href="graphic-info.scss" />
 		<link
 			rel="stylesheet/less"
 			type="text/css"
@@ -9,7 +9,8 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/less"></script>
 		<meta charset="UTF-8" />
-		<script type="module" src="info.js"></script>
+		<script type="module" src="graphic-info.js"></script>
+		<script type="module" src="graphic-rider.js"></script>
 		<script type="module" src="graphic-timer.js"></script>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,16 +23,24 @@
 	<body>
 		<div id="bloc" class="bloc">
 			<div id="info" class="info">
-				<div class="step">
-					<h2 id="competitionStep" class="competitionStep"></h2>
-				</div>
-				<div class="compet">
-					<h2
-						id="competitionCategorie"
-						class="competitionCategorie"
-					></h2>
-					<h2 id="run" class="run">RUN 1/2</h2>
-				</div>
+				<section>
+					<h2 id="competitionStep" class="mainTitle"></h2>
+					<div class="compet">
+						<h2 id="categorie"></h2>
+						<h2 id="run">RUN 1/2</h2>
+					</div>
+				</section>
+
+				<section>
+					<h2 id="pool" class="mainTitle">
+						POULE <span id="selectedPool"></span>/<span
+							id="totalPool"
+						></span>
+					</h2>
+					<table id="poolTable">
+						<tbody></tbody>
+					</table>
+				</section>
 			</div>
 			<div class="timer" id="timer-info">
 				<p class="timer-label">TIMER</p>

@@ -1,9 +1,11 @@
-const selectedCategorie = nodecg.Replicant("selectedCategorie");
-const selectedPool = nodecg.Replicant("selectedPool");
-const selectedRider = nodecg.Replicant("selectedRider");
+const selectedCategorie = nodecg.Replicant("SelectedCategorie");
+const selectedPool = nodecg.Replicant("SelectedPool");
+const selectedRider = nodecg.Replicant("SelectedRider");
 
 function refreshCategorie() {
 	nodecg.sendMessage("refreshCategorie");
+	document.getElementById("refreshDataBtn").classList.add("danger");
+	document.getElementsByTagName("tbody")[0].innerHTML = "";
 }
 
 function updateSelectedCategorie() {
@@ -18,6 +20,5 @@ function updateSelectedPool() {
 
 function updateSelectedRider() {
 	const riderSelect = document.getElementById("rider");
-	console.log(selectedRider.value);
 	selectedRider.value = riderSelect.value;
 }

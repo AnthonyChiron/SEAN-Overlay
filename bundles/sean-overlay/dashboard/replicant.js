@@ -1,3 +1,3 @@
-const selectedCategorie = nodecg.Replicant("selectedCategorie");
-const selectedPool = nodecg.Replicant("selectedPool");
-const competitionData = nodecg.Replicant("competitionData");
+const selectedCategorie = nodecg.Replicant("SelectedCategorie");
+const selectedPool = nodecg.Replicant("SelectedPool");
+const riders = nodecg.Replicant("Riders");

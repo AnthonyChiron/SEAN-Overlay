@@ -71,7 +71,7 @@
     ],
     "graphics": [
       {
-        "file": "info/info.html",
+        "file": "info/graphic-info.html",
         "width": 1920,
         "height": 1080
       }

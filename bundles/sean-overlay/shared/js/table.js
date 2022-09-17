@@ -17,5 +17,6 @@ export class Table {
 		var newCell = row.insertCell();
 		var newText = document.createTextNode(cellText);
 		newCell.appendChild(newText);
+		return newCell;
 	}
 }

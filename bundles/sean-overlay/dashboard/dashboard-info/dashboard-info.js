@@ -1,5 +1,5 @@
-const selectedRun = nodecg.Replicant("selectedRun");
-const selectedCompetitionStep = nodecg.Replicant("selectedCompetitionStep");
+const selectedRun = nodecg.Replicant("SelectedRun");
+const selectedCompetitionStep = nodecg.Replicant("SelectedCompetitionStep");
 
 function updateCompetitionStep() {
 	const selectCompetitionStep = document.getElementById(
