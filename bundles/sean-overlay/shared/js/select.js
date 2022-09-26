@@ -46,4 +46,18 @@ export class Select {
 			this.firstValue = this.select.options[0].value;
 		return this.select;
 	}
+
+	selectNextValue() {
+		if (this.select.options.selectedIndex < this.select.options.length - 1)
+			this.select.options.selectedIndex++;
+		else this.select.options.selectedIndex = 0;
+		return this.select.options[this.select.options.selectedIndex].value;
+	}
+
+	selectPrevValue() {
+		if (this.select.options.selectedIndex > 0)
+			this.select.options.selectedIndex--;
+		else this.select.options.selectedIndex = this.select.options.length - 1;
+		return this.select.options[this.select.options.selectedIndex].value;
+	}
 }

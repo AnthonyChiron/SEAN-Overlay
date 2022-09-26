@@ -12,6 +12,10 @@
 			type="text/css"
 			href="dashboard-riders.scss"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css"
+		/>
 		<script src="https://cdn.jsdelivr.net/npm/less"></script>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -26,6 +30,10 @@
 		<title>Gestion des données</title>
 	</head>
 	<body>
+		<section>
+			<button class="primary" onclick="display()">Display</button>
+			<button class="danger" onclick="hide()">Hide</button>
+		</section>
 		<section>
 			<button
 				class="primary"
@@ -52,6 +60,38 @@
 						id="rider"
 						onchange="updateSelectedRider()"
 					></select>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="btnGroup">
+				<label for="prevPoolBtn">Poule nav</label>
+				<div class="btnDiv">
+					<button class="info" id="prevPoolBtn" onclick="prevPool()">
+						<i class="fi fi-bs-angle-left"></i>
+					</button>
+					<button class="info" id="nextPoolBtn" onclick="nextPool()">
+						<i class="fi fi-bs-angle-right"></i>
+					</button>
+				</div>
+			</div>
+			<div class="btnGroup">
+				<label for="prevRiderBtn">Rider nav</label>
+				<div class="btnDiv">
+					<button
+						class="info"
+						id="prevRiderBtn"
+						onclick="prevRider()"
+					>
+						<i class="fi fi-bs-angle-left"></i>
+					</button>
+					<button
+						class="info"
+						id="nextRiderBtn"
+						onclick="nextRider()"
+					>
+						<i class="fi fi-bs-angle-right"></i>
+					</button>
 				</div>
 			</div>
 		</section>

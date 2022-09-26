@@ -20,6 +20,22 @@ const riderSelect = new Select("rider");
 
 const riderTable = new Table("riders");
 
+nodecg.listenFor("prevPoolDash", () => {
+	selectedPool.value = poolSelect.selectPrevValue();
+});
+
+nodecg.listenFor("nextPoolDash", () => {
+	selectedPool.value = poolSelect.selectNextValue();
+});
+
+nodecg.listenFor("prevRiderDash", () => {
+	selectedRider.value = riderSelect.selectPrevValue();
+});
+
+nodecg.listenFor("nextRiderDash", () => {
+	selectedRider.value = riderSelect.selectNextValue();
+});
+
 //*
 //* Rafraichissement des données
 //*

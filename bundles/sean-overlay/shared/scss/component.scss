@@ -12,6 +12,10 @@ h2 {
 	font-weight: 400;
 }
 
+label {
+	text-align: center;
+}
+
 button,
 select {
 	font-family: "Roboto";
@@ -24,7 +28,8 @@ select {
 	cursor: pointer;
 	padding: 7px;
 	margin-top: 3px;
-	margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .primary {
@@ -61,6 +66,17 @@ select {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+
+.btnGroup {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.btnDiv {
+	display: flex;
+	flex-direction: row;
 }
 
 section {

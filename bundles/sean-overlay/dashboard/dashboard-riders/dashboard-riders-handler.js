@@ -8,6 +8,30 @@ function refreshCategorie() {
 	document.getElementsByTagName("tbody")[0].innerHTML = "";
 }
 
+function display() {
+	nodecg.sendMessage("displayCompetitionInfo");
+}
+
+function hide() {
+	nodecg.sendMessage("hideCompetitionInfo");
+}
+
+function prevPool() {
+	nodecg.sendMessage("prevPoolExt");
+}
+
+function nextPool() {
+	nodecg.sendMessage("nextPoolExt");
+}
+
+function prevRider() {
+	nodecg.sendMessage("prevRiderExt");
+}
+
+function nextRider() {
+	nodecg.sendMessage("nextRiderExt");
+}
+
 function updateSelectedCategorie() {
 	const categorieSelect = document.getElementById("categories");
 	selectedCategorie.value = categorieSelect.value;

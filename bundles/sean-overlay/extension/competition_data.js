@@ -2,7 +2,12 @@ const { GoogleSpreadsheet } = require("google-spreadsheet");
 const creds = require("../sean-production-b5556aa57331.json"); // the file saved above
 const uuidv4 = require("uuid/v4");
 
-const competitionDocId = "1RiXSAOSUDPoFeKvxC4Eg1V1chi8-qW6mH3putkgXp0E";
+const testSEAN = "1RiXSAOSUDPoFeKvxC4Eg1V1chi8-qW6mH3putkgXp0E";
+
+const qualif_NRF = "1wg5_cvlG_Ql3CkGzFvuRKUtXxgRmTieii8asHhhl5vU";
+const final_NRF = "18d8gRvaOizbeq80VyvAiDKAu6dsBbTE8twMA56eueXE";
+
+const competitionDocId = testSEAN;
 const gmailAccount = "sean-drive@sean-production.iam.gserviceaccount.com";
 
 module.exports = function (nodecg) {
@@ -34,11 +39,9 @@ module.exports = function (nodecg) {
 		for (let index = 0; index < doc.sheetCount; index++) {
 			const sheet = doc.sheetsByIndex[index];
 			categories.push(sheet.title);
-			if (sheet) {
-				await importRidersFromCategorie(doc.sheetsByIndex[index]).then(
-					(riders) => (ridersTmp = ridersTmp.concat(riders))
-				);
-			}
+			await importRidersFromCategorie(sheet).then(
+				(riders) => (ridersTmp = ridersTmp.concat(riders))
+			);
 		}
 
 		riders.value = ridersTmp;

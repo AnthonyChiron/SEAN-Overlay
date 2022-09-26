@@ -41,3 +41,12 @@ export function GetPoolsFromCategorie() {
 
 	return pools.filter(distinct).sort();
 }
+
+export function isPoolValid(pool) {
+	return riders.value.filter(
+		(rider) =>
+			rider.categorie == selectedCategorie.value && rider.pool == pool
+	).length == 0
+		? false
+		: true;
+}

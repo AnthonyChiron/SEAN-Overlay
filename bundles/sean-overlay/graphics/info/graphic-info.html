@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet/less" type="text/css" href="graphic-info.scss" />
+		<link rel="stylesheet/less" type="text/css" href="graphic-info.less" />
 		<link
 			rel="stylesheet/less"
 			type="text/css"
@@ -19,24 +19,32 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<div id="bloc" class="bloc">
 			<div id="info" class="info">
-				<section>
-					<h2 id="competitionStep" class="mainTitle"></h2>
+				<section class="gradient-border">
+					<h1 id="competitionStep" class="mainTitle"></h1>
 					<div class="compet">
 						<h2 id="categorie"></h2>
 						<h2 id="run">RUN 1/2</h2>
 					</div>
 				</section>
 
-				<section>
-					<h2 id="pool" class="mainTitle">
+				<section class="gradient-border">
+					<h1 id="pool" class="mainTitle">
 						POULE <span id="selectedPool"></span>/<span
 							id="totalPool"
 						></span>
-					</h2>
+					</h1>
 					<table id="poolTable">
 						<tbody></tbody>
 					</table>
