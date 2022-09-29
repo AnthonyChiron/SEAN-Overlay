@@ -10,6 +10,16 @@ const selectedRider = nodecg.Replicant("SelectedRider");
 
 const poolTable = new Table("poolTable");
 
+nodecg.listenFor("displayRiders", () => {
+	document.getElementById("riders").classList.add("show");
+	document.getElementById("riders").classList.remove("hide");
+});
+
+nodecg.listenFor("hideRiders", () => {
+	document.getElementById("riders").classList.add("hide");
+	document.getElementById("riders").classList.remove("show");
+});
+
 selectedCategorie.on("change", (newValue) => {
 	if (newValue) fillPoolTable();
 	lightSelectedRider(selectedRider.value);

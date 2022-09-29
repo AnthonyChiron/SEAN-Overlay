@@ -9,11 +9,11 @@ function refreshCategorie() {
 }
 
 function display() {
-	nodecg.sendMessage("displayCompetitionInfo");
+	nodecg.sendMessage("displayRiders");
 }
 
 function hide() {
-	nodecg.sendMessage("hideCompetitionInfo");
+	nodecg.sendMessage("hideRiders");
 }
 
 function prevPool() {

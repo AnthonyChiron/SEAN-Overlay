@@ -8,8 +8,15 @@
 @second-color: @NRF-second-color;
 @background-color: white;
 
+body {
+	background-color: gray;
+}
+
 .mainTitle {
-	background-color: @second-color;
+	box-shadow: 0 0vmin 6vmin rgba(0, 0, 0, 0.108) inset,
+		0 6vmin 5vmin @NRF-second-color inset,
+		0 6vmin 5vmin @NRF-second-color inset;
+
 	color: white;
 	padding-top: 3px;
 	padding-bottom: 3px;
@@ -21,6 +28,7 @@
 
 section {
 	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .bloc {
@@ -57,13 +65,17 @@ section {
 			width: 100%;
 			justify-content: center;
 			border-spacing: 0 0;
-			background-color: @background-color;
 			color: @NRF-second-color;
 			font-size: 15px;
 			font-weight: 600;
 
 			tr {
+				transition: all 0.4s;
+				background: linear-gradient(to right, white 50%, #e49245e3 50%)
+					left;
+				background-size: 200% 200%;
 				display: flex;
+				transition: 0.4s;
 			}
 
 			td {
@@ -82,7 +94,10 @@ section {
 			}
 
 			.selectedRider {
-				background-color: #e49245e3;
+				transition: all 0.4s;
+				background: linear-gradient(to left, #e49245e3 50%, white 50%)
+					right;
+				background-size: 200% 200%;
 				color: white;
 			}
 		}
@@ -101,7 +116,7 @@ section {
 	}
 
 	.slideRight {
-		animation: slide-up 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+		animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 	}
 
 	.timer {
@@ -137,11 +152,11 @@ section {
 	}
 
 	.show {
-		animation: scale-in-ver-bottom 0.3s both;
+		animation: scale-in-ver-bottom 0.5s both;
 	}
 
 	.hide {
-		animation: scale-out-ver-bottom 0.25s both;
+		animation: scale-out-ver-bottom 0.5s both;
 	}
 
 	.hide-delay {
@@ -155,7 +170,7 @@ section {
 }
 
 .gradient-border {
-	--border-width: 1.5px;
+	--border-width: 1px;
 
 	position: relative;
 
@@ -167,10 +182,17 @@ section {
 		z-index: -1;
 		width: calc(100% + var(--border-width) * 2);
 		height: calc(100% + var(--border-width) * 2);
-		background: linear-gradient(60deg, white, @NRF-second-color, white);
-		background-size: 300% 300%;
+		background: linear-gradient(
+			60deg,
+			#e9f3f5,
+			@NRF-second-color,
+			@NRF-second-color,
+			#e9f3f5,
+			@NRF-second-color
+		);
+		background-size: 200% 200%;
 		background-position: 0 50%;
-		animation: moveGradient 6s alternate infinite;
+		animation: moveGradient 10s alternate infinite;
 	}
 }
 
