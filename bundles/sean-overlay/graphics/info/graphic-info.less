@@ -1,15 +1,23 @@
 //* VARIABLES *//
+@font-face {
+	font-family: "Akira";
+	src: url("./Akira\ Expanded\ Demo.ttf");
+}
+
 @widthpx: 250px; // sea blueHell
 
-@NRF-main-color: #e49245;
-@NRF-second-color: #54929b;
+@NRF-main-color: rgba(255, 255, 255, 0.63);
+@NRF-second-color: black;
 
 @main-color: @NRF-main-color;
 @second-color: @NRF-second-color;
 @background-color: white;
+@text-color: black;
+
+@border-radius: 6px;
 
 body {
-	background-color: gray;
+	background-color: transparent;
 }
 
 .mainTitle {
@@ -21,8 +29,11 @@ body {
 	padding-top: 3px;
 	padding-bottom: 3px;
 	margin: 0;
+	border-top-left-radius: @border-radius;
+	border-top-right-radius: @border-radius;
+	font-family: "Akira";
+	font-size: 20px;
 	font-style: italic;
-	font-weight: 800;
 	text-align: center;
 }
 
@@ -35,8 +46,10 @@ section {
 	display: flex;
 	position: absolute;
 	font-family: Montserrat;
-	top: 10%;
-	left: 50%;
+	// bottom: 40%;
+	// left: 50%;
+	bottom: 10%;
+	left: 80%;
 	flex-direction: column;
 	transition: 0.8s;
 	width: @widthpx;
@@ -45,14 +58,25 @@ section {
 		display: flex;
 		flex-direction: column;
 
+		.logo {
+			background-image: url("./Globe_Blanc.png");
+			background-size: 80%;
+			opacity: 60%;
+			background-repeat: no-repeat;
+			background-position: center top;
+			width: 100%;
+			height: 96px;
+		}
+
 		.compet {
 			display: flex;
-			background-color: @second-color;
+			background-color: white;
+			border-bottom-left-radius: @border-radius;
+			border-bottom-right-radius: @border-radius;
 
 			h2 {
 				flex: 1;
-				color: @NRF-second-color;
-				background-color: @background-color;
+				color: @text-color;
 				margin: 0;
 				font-size: 15px;
 				padding: 5px;
@@ -65,17 +89,26 @@ section {
 			width: 100%;
 			justify-content: center;
 			border-spacing: 0 0;
-			color: @NRF-second-color;
+			color: @text-color;
 			font-size: 15px;
 			font-weight: 600;
 
 			tr {
 				transition: all 0.4s;
-				background: linear-gradient(to right, white 50%, #e49245e3 50%)
+				background: linear-gradient(
+						to right,
+						white 50%,
+						@main-color 50%
+					)
 					left;
 				background-size: 200% 200%;
 				display: flex;
 				transition: 0.4s;
+			}
+
+			tr:last-of-type {
+				border-bottom-left-radius: @border-radius;
+				border-bottom-right-radius: @border-radius;
 			}
 
 			td {
@@ -83,32 +116,32 @@ section {
 				text-align: center;
 			}
 
-			.first {
+			.firstName {
 				text-align: right;
 				padding-right: 5px;
 			}
 
-			.last {
+			.lastName {
 				text-align: left;
 				padding-left: 5px;
 			}
 
 			.selectedRider {
 				transition: all 0.4s;
-				background: linear-gradient(to left, #e49245e3 50%, white 50%)
+				background: linear-gradient(to left, @main-color 50%, white 50%)
 					right;
 				background-size: 200% 200%;
-				color: white;
 			}
 		}
 	}
 
 	.slideIn {
-		animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+		// animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation: slide-bottom 0.6s both;
 	}
 
 	.slideOut {
-		animation: slide-up 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+		animation: slide-up 0.6s both;
 	}
 
 	.slideLeft {
@@ -135,28 +168,31 @@ section {
 		}
 
 		.timer-label {
-			background-image: url("back_NRF.png");
-			background-size: 100%;
-			color: white;
-			text-shadow: 0 0 5px #964e0a;
-			font-weight: 900;
-			font-size: 27px;
+			//			background-image: url("back_NRF.png");
+			//			background-size: 100%;
+			border-top-left-radius: @border-radius;
+			border-bottom-left-radius: @border-radius;
+
+			background-color: white;
+			color: black;
+			font-size: 25px;
+			font-family: "Akira";
+			font-style: italic;
 		}
 
 		.timer-timer {
-			background-color: @background-color;
-			color: @main-color;
+			color: @text-color;
 			font-weight: 400;
 			font-size: 30px;
 		}
 	}
 
 	.show {
-		animation: scale-in-ver-bottom 0.5s both;
+		animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 	}
 
 	.hide {
-		animation: scale-out-ver-bottom 0.5s both;
+		animation: fade-out-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 	}
 
 	.hide-delay {
@@ -169,13 +205,19 @@ section {
 	transform: scale3d(1, 0, 0);
 }
 
+.color-border {
+	border-radius: @border-radius;
+}
+
 .gradient-border {
 	--border-width: 1px;
-
+	border-radius: @border-radius;
 	position: relative;
 
 	&::after {
 		position: absolute;
+		border-radius: @border-radius;
+
 		content: "";
 		top: calc(-1 * var(--border-width));
 		left: calc(-1 * var(--border-width));

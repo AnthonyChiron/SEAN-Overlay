@@ -5,9 +5,10 @@ const uuidv4 = require("uuid/v4");
 const testSEAN = "1RiXSAOSUDPoFeKvxC4Eg1V1chi8-qW6mH3putkgXp0E";
 
 const qualif_NRF = "1wg5_cvlG_Ql3CkGzFvuRKUtXxgRmTieii8asHhhl5vU";
-const final_NRF = "18d8gRvaOizbeq80VyvAiDKAu6dsBbTE8twMA56eueXE";
+const qualif_Trottirama = "1gmryYgxxHze-LMJ9-ywsF4_6paKMR2V2WUh9FBr6ZXc";
+const final_Trottirama = "1gmryYgxxHze-LMJ9-ywsF4_6paKMR2V2WUh9FBr6ZXc";
 
-const competitionDocId = testSEAN;
+const competitionDocId = qualif_Trottirama;
 const gmailAccount = "sean-drive@sean-production.iam.gserviceaccount.com";
 
 module.exports = function (nodecg) {

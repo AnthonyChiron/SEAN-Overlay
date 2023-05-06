@@ -67,6 +67,14 @@
         "file": "dashboard-timer/dashboard-timer.html",
         "headerColor": "#525F78",
         "workspace": "SEAN"
+      },
+      {
+        "name": "Paramètres",
+        "title": "Paramètres",
+        "width": 4,
+        "file": "parameters/parameters.html",
+        "headerColor": "#525F78",
+        "workspace": "SEAN"
       }
     ],
     "graphics": [

@@ -51,16 +51,17 @@ function fillPoolTable() {
 
 				poolTable
 					.addCellIntoRow(rider.firstName, newRow)
-					.classList.add("first");
+					.classList.add("firstName");
 				poolTable
 					.addCellIntoRow(rider.lastName, newRow)
-					.classList.add("last");
+					.classList.add("lastName");
 
 				newRow.id = rider.id;
 			}
 		);
 	}
 }
+
 function lightSelectedRider(riderId) {
 	let prevSelected = document.getElementsByClassName("selectedRider");
 	while (prevSelected.length)
