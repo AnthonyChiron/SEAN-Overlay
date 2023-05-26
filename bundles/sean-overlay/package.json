@@ -82,6 +82,11 @@
         "file": "info/graphic-info.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "pools-presentation/graphic-pools.html",
+        "width": 1920,
+        "height": 1080
       }
     ]
   },

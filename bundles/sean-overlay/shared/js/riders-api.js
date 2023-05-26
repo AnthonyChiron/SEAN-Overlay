@@ -1,9 +1,28 @@
 import { distinct } from "./utli.js";
 
-const riders = nodecg.Replicant("Riders");
+export const riders = nodecg.Replicant("Riders");
 
 export function ParseRiderFullName(rider) {
 	return rider.firstName + " " + rider.lastName;
+}
+
+export function GetRidersByCategorie(categorie) {
+	let riderTable = [];
+
+	riders.value
+		.filter((rider) => rider.categorie == categorie)
+		.forEach((rider) => {
+			riderTable.push({
+				id: rider.id,
+				firstName: rider.firstName,
+				lastName: rider.lastName,
+				pool: rider.pool,
+				age: rider.age,
+				nat: rider.nat,
+				score: rider.score,
+			});
+		});
+	return riderTable;
 }
 
 export function GetRiders(categorie, pool) {

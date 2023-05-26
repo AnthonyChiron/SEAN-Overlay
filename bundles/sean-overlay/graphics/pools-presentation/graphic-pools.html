@@ -27,32 +27,39 @@
 		/>
 	</head>
 	<body>
-		<div id="bloc" class="pools">
-			<div id="info" class="info">
+		<div id="bloc" class="bloc">
+			<div id="pool" class="pool">
 				<section id="competition-info" class="color-border">
-					<h1 id="competitionStep" class="mainTitle"></h1>
+					<div class="header">
+						<div class="left">
+							<img
+								class="logo"
+								src="../../shared/assets/firstry.png"
+								alt=""
+							/>
+						</div>
+						<div class="right">
+							<h1 id="step"></h1>
+							<h1>-</h1>
+							<h1 id="categorie"></h1>
+						</div>
+					</div>
+					<div class="separator"></div>
 					<div class="compet">
 						<h2 id="categorie"></h2>
-						<h2 id="run">RUN 1/2</h2>
+						<h2 id="run"></h2>
 					</div>
 				</section>
-
-				<!-- A ENLEVER POUR QUALIFICATION -->
-				<section id="riders" class="color-border">
-					<h1 id="pool" class="mainTitle">
-						POULE <span id="selectedPool"></span>/<span
-							id="totalPool"
-						></span>
-					</h1>
-					<table id="poolTable">
-						<tbody></tbody>
-					</table>
-				</section>
 			</div>
-			<div class="timer" id="timer-info">
-				<p class="timer-label">TIMER</p>
-				<p class="timer-timer" id="timer">00:00</p>
-			</div>
+			<table id="ridersTable" class="ridersTable">
+				<thead>
+					<th>Prénom</th>
+					<th>Nom</th>
+					<th>Poule</th>
+				</thead>
+				<div class="space"></div>
+				<tbody></tbody>
+			</table>
 		</div>
 	</body>
 </html>
