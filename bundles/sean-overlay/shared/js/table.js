@@ -1,8 +1,20 @@
 export class Table {
 	constructor(name) {
 		this.name = name;
-		this.table = document.getElementById(this.name);
-		this.body = this.table.getElementsByTagName("tbody")[0];
+		if (this.name != "") {
+			this.table = document.getElementById(this.name);
+			this.body = this.table.getElementsByTagName("tbody")[0];
+		}
+	}
+
+	initTable(divName, name) {
+		this.name = name;
+		this.div = document.getElementById(divName);
+		this.table = document.createElement("table");
+		this.table.classList.add(name);
+		this.body = document.createElement("tbody");
+		this.table.appendChild(this.body);
+		this.div.appendChild(this.table);
 	}
 
 	deleteAllRowFromBodyTable() {

@@ -22,16 +22,15 @@ body {
 }
 
 .bloc {
-	margin-top: 10vh;
-	margin-bottom: 10vh;
 	margin-left: 15vw;
 	margin-right: 15vw;
 	width: 70vw;
 	border-radius: 1.5vw;
-	background-color: rgba(0, 0, 0, 0.747);
+	background-color: rgba(0, 0, 0, 0.856);
 
 	.header {
 		font-family: "Akira";
+		font-size: 22px;
 		height: 10vh;
 		display: flex;
 		align-items: center;
@@ -39,6 +38,7 @@ body {
 		margin-left: 2.5vw;
 		margin-right: 2.5vw;
 		justify-content: space-around;
+		font-style: italic;
 
 		.left {
 			margin-left: 2vw;
@@ -51,7 +51,7 @@ body {
 		}
 
 		.right {
-			flex: 3;
+			width: 40vw;
 			margin-right: 2vw;
 			display: flex;
 			justify-content: space-between;
@@ -62,34 +62,60 @@ body {
 		height: 0x;
 		width: 90%;
 		margin-left: 5%;
-		border: 1.9px solid white;
+		border: 2.9px solid white;
 		border-radius: 10px;
+		margin-bottom: 10px;
 	}
 
-	.ridersTable {
-		width: 80%;
-		margin-left: 7%;
+	.tables {
+		display: flex;
+		justify-content: space-around;
 		font-family: "Montserrat";
 		color: white;
-		padding-bottom: 5vh;
-		padding-top: 5vh;
-		font-size: 20px;
-		font-weight: 400;
+		flex-wrap: wrap;
+		padding-bottom: 6vh;
 
-		tbody:before {
-			line-height: 20px;
-			content: "-";
-			color: transparent; /* to hide text */
-			display: block;
-		}
+		.poule {
+			margin-left: 2vw;
+			margin-right: 2vw;
+			margin-top: 2vw;
 
-		thead {
-			font-size: 23px;
-		}
+			h3 {
+				font-family: "Akira";
+				text-align: center;
+				font-size: 25px;
+				margin-bottom: 0;
+			}
 
-		tr {
-			line-height: 28px;
-			text-align: center;
+			.separator {
+				width: 100%;
+				border: 0.5px solid white;
+				border-radius: 10px;
+				margin-left: 0;
+			}
+
+			table {
+				width: 20vw;
+
+				tr {
+					font-size: 23px;
+					font-weight: 400;
+					line-height: 28px;
+
+					td {
+						width: 12.5vw;
+					}
+
+					.firstName {
+						font-weight: 300;
+					}
+
+					.lastName {
+						font-weight: 600;
+						text-align: right;
+					}
+				}
+			}
 		}
 	}
 }
