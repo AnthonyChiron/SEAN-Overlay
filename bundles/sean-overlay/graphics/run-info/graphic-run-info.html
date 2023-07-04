@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- <link
+			rel="stylesheet/less"
+			type="text/css"
+			href="graphic-run-info.less"
+		/> -->
+		<link
+			rel="stylesheet/less"
+			type="text/css"
+			href="graphic-run-info2.less"
+		/>
+		<link
+			rel="stylesheet/less"
+			type="text/css"
+			href="../../shared/scss/animation.scss"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+		<meta charset="UTF-8" />
+		<script type="module" src="graphic-run-info.js"></script>
+		<script type="module" src="graphic-rider.js"></script>
+		<script type="module" src="graphic-timer.js"></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="bloc" class="bloc">
+			<div id="info" class="info">
+				<section id="competition-info" class="commonInfo">
+					<h1 id="competitionStep" class="mainTitle"></h1>
+					<div class="compet">
+						<h2 id="categorie"></h2>
+					</div>
+				</section>
+
+				<!-- A ENLEVER POUR QUALIFICATION -->
+				<section id="riders" class="riders">
+					<h1 id="pool" class="mainTitle">
+						POULE <span id="selectedPool"></span>/<span
+							id="totalPool"
+						></span>
+					</h1>
+					<table id="poolTable" class="poolTable">
+						<tbody></tbody>
+					</table>
+				</section>
+			</div>
+			<section class="timer" id="timer-info">
+				<p class="timer-label" id="run">RUN 1/2</p>
+				<p class="timer-timer" id="timer">00:00</p>
+			</section>
+		</div>
+	</body>
+</html>

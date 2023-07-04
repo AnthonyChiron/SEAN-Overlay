@@ -2,6 +2,11 @@ const selectedCategorie = nodecg.Replicant("SelectedCategorie");
 const selectedPool = nodecg.Replicant("SelectedPool");
 const selectedRider = nodecg.Replicant("SelectedRider");
 
+nodecg.listenFor("refreshCategorie", async () => {
+	document.getElementById("refreshDataBtn").classList.add("danger");
+	document.getElementsByTagName("tbody")[0].innerHTML = "";
+});
+
 function refreshCategorie() {
 	nodecg.sendMessage("refreshCategorie");
 	document.getElementById("refreshDataBtn").classList.add("danger");

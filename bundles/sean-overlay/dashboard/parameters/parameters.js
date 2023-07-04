@@ -1,8 +1,7 @@
-function updateDoc() {
-	console.log(test);
-}
+const doc = nodecg.Replicant("document");
 
-function updateDocValue() {
+function updateDoc() {
 	const docValue = document.getElementById("document");
-	console.log(docValue.value);
+	doc.value = docValue.value;
+	nodecg.sendMessage("refreshCategorie");
 }

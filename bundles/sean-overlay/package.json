@@ -45,7 +45,7 @@
     "compatibleRange": "^1.1.1",
     "dashboardPanels": [
       {
-        "name": "Data handler",
+        "name": "Riders",
         "title": "Affichage des riders",
         "width": 4,
         "file": "dashboard-riders/dashboard-riders.html",
@@ -53,10 +53,18 @@
         "workspace": "SEAN"
       },
       {
+        "name": "WaitingScreen",
+        "title": "Waiting screen",
+        "width": 4,
+        "file": "dashboard-waiting-info/dashboard-waiting-info.html",
+        "headerColor": "#525F78",
+        "workspace": "SEAN"
+      },
+      {
         "name": "Info",
         "title": "Informations principal",
         "width": 4,
-        "file": "dashboard-info/dashboard-info.html",
+        "file": "dashboard-run-info/dashboard-run-info.html",
         "headerColor": "#525F78",
         "workspace": "SEAN"
       },
@@ -79,12 +87,17 @@
     ],
     "graphics": [
       {
-        "file": "info/graphic-info.html",
+        "file": "run-info/graphic-run-info.html",
         "width": 1920,
         "height": 1080
       },
       {
         "file": "pools-presentation/graphic-pools.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "waiting-info/graphic-waiting-info.html",
         "width": 1920,
         "height": 1080
       }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet/less"
+			type="text/css"
+			href="dashboard-run-info.scss"
+		/>
+		<link
+			rel="stylesheet/less"
+			type="text/css"
+			href="../../shared/scss/component.scss"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+		<script src="dashboard-run-info.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+		/>
+		<title>TIMER</title>
+	</head>
+	<body>
+		<section>
+			<button class="primary" onclick="displayCompetitionInfo()">
+				Display
+			</button>
+			<button class="danger" onclick="hideCompetitionInfo()">Hide</button>
+			<div class="select">
+				<label for="competitionStepSelect">Etape</label>
+				<select
+					id="competitionStepSelect"
+					onchange="updateCompetitionStep()"
+				>
+					<option value="QUALIFICATION">Qualification</option>
+					<option value="FINAL">Finale</option>
+				</select>
+			</div>
+			<div class="select">
+				<label for="runSelect">Run</label>
+				<select id="runSelect" onchange="updateRun()">
+					<option value="RUN 1/2">1</option>
+					<option value="RUN 2/2">2</option>
+					<option value="LAST TRICK">Last trick</option>
+					<option value="JAM">Jam session</option>
+				</select>
+			</div>
+		</section>
+	</body>
+</html>
