@@ -15,6 +15,5 @@ nodecg.listenFor("showTimer", () => {
 });
 
 timer.on("change", (newValue) => {
-	console.log(newValue);
 	document.getElementById("timer").innerHTML = newValue;
 });

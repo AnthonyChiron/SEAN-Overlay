@@ -63,10 +63,7 @@ function createTable(riderTables, currentPool) {
 	div.appendChild(Html.createTitle("Poule " + (currentPool + 1)));
 	div.appendChild(Html.createDiv("separator", "separator"));
 
-	riderTables.push(new Table(""));
-
-	riderTables[currentPool].initTable(
-		"Poule" + (currentPool + 1),
-		"tablePool"
+	riderTables.push(
+		new Table("TablePoule" + (currentPool + 1), "Poule" + (currentPool + 1))
 	);
 }

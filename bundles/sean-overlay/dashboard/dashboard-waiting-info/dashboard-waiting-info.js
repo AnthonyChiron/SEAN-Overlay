@@ -4,15 +4,13 @@ const timerCount = nodecg.Replicant("waitingTimerCount", {
 });
 const labelTimerReplicant = nodecg.Replicant("labelTimer");
 
-function updateLabelTimer(labelTimer) {
+function updateLabelTimer() {
 	const label = document.getElementById("labelTimer");
-	console.log(label.value);
 	labelTimerReplicant.value = label.value;
 }
 
 function updateTimerCount() {
 	const inputTimer = document.getElementById("timerCountSelect");
-	console.log(inputTimer.value);
 	timerCount.value = inputTimer.value;
 	nodecg.sendMessage("resetWaitingTimer");
 }
@@ -20,7 +18,6 @@ function updateTimerCount() {
 function updateTimerCountFromTxt() {
 	const inputTimer = document.getElementById("timerCountTxt");
 	timerCount.value = inputTimer.value * 60;
-	console.log(inputTimer.value * 60);
 	nodecg.sendMessage("resetWaitingTimer");
 }
 

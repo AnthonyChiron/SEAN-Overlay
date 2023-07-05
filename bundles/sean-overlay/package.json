@@ -22,18 +22,8 @@
   "nodecg": {
     "assetCategories": [
       {
-        "name": "thumbnails",
-        "title": "Thumbnails",
-        "allowedTypes": [
-          "jpg",
-          "jpeg",
-          "gif",
-          "png"
-        ]
-      },
-      {
-        "name": "boxart",
-        "title": "Boxart",
+        "name": "pubs",
+        "title": "Pubs",
         "allowedTypes": [
           "jpg",
           "jpeg",
@@ -93,6 +83,11 @@
       },
       {
         "file": "pools-presentation/graphic-pools.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "ranking-presentation/graphic-ranking.html",
         "width": 1920,
         "height": 1080
       },

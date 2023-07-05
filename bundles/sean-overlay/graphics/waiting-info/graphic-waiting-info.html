@@ -14,6 +14,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/less"></script>
 		<meta charset="UTF-8" />
 		<script type="module" src="graphic-waiting-info.js"></script>
+		<script type="module" src="swiper.js"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 		<link
@@ -40,11 +41,7 @@
 		<div id="bloc" class="bloc">
 			<div class="box pub">
 				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide firstrySite"></div>
-						<div class="swiper-slide firstryPrime"></div>
-						<div class="swiper-slide firstryYoutube"></div>
-					</div>
+					<div id="pubSwipper" class="swiper-wrapper"></div>
 				</div>
 				<!-- <video autoplay muted preload loop id="myVideo">
 					<source
@@ -98,15 +95,4 @@
 			</div>
 		</div>
 	</body>
-
-	<script>
-		var swiper = new Swiper(".mySwiper", {
-			spaceBetween: 30,
-			centeredSlides: true,
-			autoplay: {
-				delay: 10000,
-				disableOnInteraction: false,
-			},
-		});
-	</script>
 </html>

@@ -1,0 +1,158 @@
+//* VARIABLES *//
+@font-face {
+	font-family: "Akira";
+	src: url("../../shared/assets/Akira\ Expanded\ Demo.ttf");
+}
+
+@widthpx: 250px; // sea blueHell
+
+@NRF-main-color: rgba(255, 255, 255, 0.63);
+@NRF-second-color: black;
+
+@main-color: @NRF-main-color;
+@second-color: @NRF-second-color;
+@background-color: white;
+@text-color: black;
+
+@border-radius: 6px;
+
+body {
+	// background-image: url("../../shared/assets/test.jpg");
+	background-size: 130%;
+	height: 98vh;
+	display: flex;
+	align-items: center;
+}
+
+.bloc {
+	margin-left: 15vw;
+	margin-right: 15vw;
+	width: 70vw;
+	background-image: linear-gradient(315deg, #252525ab, #000000b6),
+		url("../../shared/assets/image_part_001\ \(1\).jpg");
+	background-size: 120%;
+	box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.76);
+	animation: backgroundGradient 354s ease infinite;
+
+	.header {
+		font-family: "Akira";
+		font-size: 19px;
+		height: 12vh;
+		display: flex;
+		align-items: center;
+		color: white;
+		justify-content: space-around;
+		font-style: italic;
+
+		.left {
+			margin-left: 2vw;
+			flex: 2;
+
+			.logo {
+				height: 12vh;
+				margin-top: 0.8vh;
+			}
+		}
+
+		.right {
+			width: 50vw;
+			margin-right: 2vw;
+			display: flex;
+			justify-content: space-between;
+
+			.info {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				#step {
+					margin: 0px;
+					font-size: 18px;
+					padding-left: 2vw;
+				}
+
+				h1 {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.separator {
+		height: 0x;
+		width: 90%;
+		margin-left: 5%;
+		border: 2.9px solid white;
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+
+	.ranking {
+		display: flex;
+		justify-content: center;
+
+		.rankingTable {
+			display: flex;
+			flex-direction: column-reverse;
+			color: white;
+			margin-bottom: 2vh;
+
+			thead {
+				font-size: 22px;
+				margin-bottom: 1vh;
+				margin-top: 2vh;
+				font-family: "akira";
+				border-bottom: 2px solid rgb(255, 255, 255);
+			}
+
+			tbody {
+				font-family: "Montserrat";
+				font-size: 20px;
+			}
+
+			.rank {
+				font-family: "akira";
+				font-size: 20px;
+				width: 5vw;
+				text-align: right;
+			}
+
+			.firstName {
+				text-align: right;
+			}
+
+			.lastName {
+				text-align: left;
+				padding-left: 10px;
+				font-weight: 650;
+			}
+			.score {
+				font-weight: 800;
+				font-size: 22px;
+			}
+
+			tr {
+				display: flex;
+				font-weight: 400;
+				line-height: 35px;
+				text-align: center;
+
+				td {
+					width: 12.5vw;
+				}
+			}
+		}
+	}
+
+	@keyframes backgroundGradient {
+		0% {
+			background-position: 5% 0%;
+		}
+		50% {
+			background-position: 96% 100%;
+		}
+		100% {
+			background-position: 5% 0%;
+		}
+	}
+}

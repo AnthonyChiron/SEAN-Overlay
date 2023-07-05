@@ -65,7 +65,6 @@ module.exports = async function (nodecg) {
 	nodecg.listenFor("resetWaitingTimer", () => {
 		nodecg.sendMessage("showWaitingTimer");
 		waitingTimer.stop();
-		console.log(waitingTimerCount.value);
 		waitingTimer.start({
 			countdown: true,
 			startValues: { seconds: waitingTimerCount.value },
@@ -89,7 +88,6 @@ module.exports = async function (nodecg) {
 
 		if (timerToParse.getTimeValues().seconds < 10) timerString += "0";
 		timerString += timerToParse.getTimeValues().seconds.toString();
-		console.log(timerString);
 		return timerString;
 	}
 };
