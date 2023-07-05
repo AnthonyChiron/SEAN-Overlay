@@ -42,19 +42,19 @@
 			>
 				Refresh data
 			</button>
-			<div class="select">
+			<div class="inputGroupColumn">
 				<label for="categories">Catégorie</label>
 				<select
 					id="categories"
 					onchange="updateSelectedCategorie()"
 				></select>
 			</div>
-			<div class="select">
+			<div class="inputGroupColumn">
 				<label for="pools">Poule</label>
 				<select id="pools" onchange="updateSelectedPool()"></select>
 			</div>
 			<div class="large">
-				<div class="select">
+				<div class="inputGroupColumn">
 					<label for="rider">Rider</label>
 					<select
 						id="rider"
@@ -64,9 +64,9 @@
 			</div>
 		</section>
 		<section>
-			<div class="btnGroup">
+			<div class="inputGroupColumn">
 				<label for="prevPoolBtn">Poule nav</label>
-				<div class="btnDiv">
+				<div class="inputGroupRow">
 					<button class="info" id="prevPoolBtn" onclick="prevPool()">
 						<i class="bi bi-arrow-left-circle-fill"></i>
 					</button>
@@ -75,9 +75,9 @@
 					</button>
 				</div>
 			</div>
-			<div class="btnGroup">
+			<div class="inputGroupColumn">
 				<label for="prevRiderBtn">Rider nav</label>
-				<div class="btnDiv">
+				<div class="inputGroupRow">
 					<button
 						class="info"
 						id="prevRiderBtn"
@@ -95,20 +95,6 @@
 				</div>
 			</div>
 		</section>
-		<section>
-			<table id="riders" class="riders">
-				<thead>
-					<tr>
-						<th>Nom</th>
-						<th>Prénom</th>
-						<th>Age</th>
-						<th>Poule</th>
-						<th>Score</th>
-						<th>Nationalité</th>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</section>
+		<section id="riders"></section>
 	</body>
 </html>

@@ -1,7 +1,7 @@
 export class Table {
 	constructor(name, divName) {
 		this.name = name;
-		if (this.name != "") {
+		if (this.name != "" && divName != "") {
 			this.initTable(divName);
 		}
 	}

@@ -1,6 +1,7 @@
 import { HtmlComponent } from "../../shared/js/htmlComponent.js";
 
 const timer = nodecg.Replicant("waitingTimerFront");
+const contestName = nodecg.Replicant("contestName");
 const labelTimer = nodecg.Replicant("labelTimer");
 const selectedCategorie = nodecg.Replicant("SelectedCategorie");
 const pubs = nodecg.Replicant("assets:pubs");
@@ -14,6 +15,10 @@ pubs.on("change", (newValue) => {
 		slide.innerText = "z";
 		document.getElementById("pubSwipper").appendChild(slide);
 	});
+});
+
+contestName.on("change", (newValue) => {
+	document.getElementById("contestName").innerHTML = newValue;
 });
 
 labelTimer.on("change", (newValue) => {

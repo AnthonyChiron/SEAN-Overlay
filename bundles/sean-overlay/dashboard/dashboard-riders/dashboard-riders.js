@@ -18,7 +18,12 @@ const categorieSelect = new Select("categories");
 const poolSelect = new Select("pools");
 const riderSelect = new Select("rider");
 
-const riderTable = new Table("riders");
+const riderTable = new Table("ridersTable", "riders");
+
+riderTable.insertHeader(
+	["Nom", "Prénom", "Age", "Poule", "Score", "Nationalité"],
+	["Nom", "Prénom", "Age", "Poule", "Score", "Nationalité"]
+);
 
 nodecg.listenFor("prevPoolDash", () => {
 	selectedPool.value = poolSelect.selectPrevValue();
@@ -40,6 +45,7 @@ nodecg.listenFor("nextRiderDash", () => {
 //* Rafraichissement des données
 //*
 riders.on("change", (newValue) => {
+	console.log("a");
 	if (newValue) {
 		document.getElementById("refreshDataBtn").classList.remove("danger");
 
