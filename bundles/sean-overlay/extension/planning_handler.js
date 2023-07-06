@@ -25,6 +25,7 @@ module.exports = function (nodecg) {
 				minutes: newValue.minutes,
 			};
 			planningReplicant.value.push(categorie);
+			newPlanningCategorie.value = "";
 		}
 	});
 

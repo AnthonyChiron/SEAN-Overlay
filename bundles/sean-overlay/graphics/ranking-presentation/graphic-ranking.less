@@ -22,9 +22,11 @@ body {
 	height: 98vh;
 	display: flex;
 	align-items: center;
+	opacity: 0.95;
 }
 
 .bloc {
+	border-radius: 4px;
 	margin-left: 15vw;
 	margin-right: 15vw;
 	width: 70vw;
@@ -44,36 +46,19 @@ body {
 		justify-content: space-around;
 		font-style: italic;
 
-		.left {
-			margin-left: 2vw;
-			flex: 2;
-
-			.logo {
-				height: 12vh;
-				margin-top: 0.8vh;
-			}
-		}
-
-		.right {
-			width: 50vw;
-			margin-right: 2vw;
+		.info {
 			display: flex;
-			justify-content: space-between;
+			flex-direction: column;
+			justify-content: center;
 
-			.info {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+			#step {
+				margin: 0px;
+				font-size: 18px;
+				padding-left: 2vw;
+			}
 
-				#step {
-					margin: 0px;
-					font-size: 18px;
-					padding-left: 2vw;
-				}
-
-				h1 {
-					margin: 0;
-				}
+			h1 {
+				margin: 0;
 			}
 		}
 	}
@@ -82,7 +67,8 @@ body {
 		height: 0x;
 		width: 90%;
 		margin-left: 5%;
-		border: 2.9px solid white;
+		margin-right: 5%;
+		border-bottom: 3px solid white;
 		border-radius: 10px;
 		margin-bottom: 10px;
 	}
@@ -102,7 +88,7 @@ body {
 				margin-bottom: 1vh;
 				margin-top: 2vh;
 				font-family: "akira";
-				border-bottom: 2px solid rgb(255, 255, 255);
+				border-bottom: 1.5px solid rgb(255, 255, 255);
 			}
 
 			tbody {
