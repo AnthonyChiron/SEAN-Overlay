@@ -8,7 +8,7 @@ const selectedPool = nodecg.Replicant("SelectedPool");
 const totalPool = nodecg.Replicant("TotalPool");
 const selectedRider = nodecg.Replicant("SelectedRider");
 
-const poolTable = new Table("poolTable");
+const poolTable = new Table("poolTable", "poolRiders");
 
 nodecg.listenFor("displayRiders", () => {
 	document.getElementById("riders").classList.add("show");

@@ -30,28 +30,33 @@
 		<title>Gestion des données</title>
 	</head>
 	<body>
-		<section>
+		<!-- <section>
 			<button class="primary" onclick="display()">Display</button>
 			<button class="danger" onclick="hide()">Hide</button>
-		</section>
+		</section> -->
 		<section>
 			<button
-				class="primary"
+				class="primary input4"
 				id="refreshDataBtn"
 				onclick="refreshCategorie()"
 			>
-				Refresh data
+				<i class="bi bi-arrow-repeat"></i>
 			</button>
 			<div class="inputGroupColumn">
 				<label for="categories">Catégorie</label>
 				<select
 					id="categories"
+					class="w3"
 					onchange="updateSelectedCategorie()"
 				></select>
 			</div>
 			<div class="inputGroupColumn">
 				<label for="pools">Poule</label>
-				<select id="pools" onchange="updateSelectedPool()"></select>
+				<select
+					id="pools"
+					class="w1"
+					onchange="updateSelectedPool()"
+				></select>
 			</div>
 			<div class="large">
 				<div class="inputGroupColumn">

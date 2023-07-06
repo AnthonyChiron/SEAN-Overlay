@@ -26,14 +26,17 @@
 	</head>
 	<body>
 		<section>
-			<button class="primary" onclick="displayCompetitionInfo()">
+			<!-- <button class="primary input1" onclick="displayCompetitionInfo()">
 				Display
 			</button>
-			<button class="danger" onclick="hideCompetitionInfo()">Hide</button>
+			<button class="danger input1" onclick="hideCompetitionInfo()">
+				Hide
+			</button> -->
 			<div class="inputGroupColumn">
 				<label for="competitionStepSelect">Etape</label>
 				<select
 					id="competitionStepSelect"
+					class="w3"
 					onchange="updateCompetitionStep()"
 				>
 					<option value="QUALIFICATION">Qualification</option>
@@ -42,7 +45,7 @@
 			</div>
 			<div class="inputGroupColumn">
 				<label for="runSelect">Run</label>
-				<select id="runSelect" onchange="updateRun()">
+				<select id="runSelect" class="w2" onchange="updateRun()">
 					<option value="RUN 1/2">1</option>
 					<option value="RUN 2/2">2</option>
 					<option value="LAST TRICK">Last trick</option>

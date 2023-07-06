@@ -26,16 +26,30 @@
 	</head>
 	<body>
 		<section>
-			<button class="primary" onclick="timerStart()">Start timer</button>
-			<button class="danger" onclick="timerStop()">Stop timer</button>
-			<button class="warning" onclick="timerReset()">Reset timer</button>
-			<select id="timerCountSelect" onchange="updateTimerCount()">
-				<option value="35" selected>35s</option>
-				<option value="45" selected>45s</option>
-				<option value="50">50s</option>
-				<option value="55">55s</option>
-				<option value="90">1m30</option>
-			</select>
+			<div class="inputGroupColumn">
+				<label for="command">Contrôles du timer</label>
+				<div id="command" class="inputGroupRow">
+					<button class="primary input3" onclick="timerStart()">
+						<i class="bi bi-play-fill"></i>
+					</button>
+					<button class="danger input3" onclick="timerStop()">
+						<i class="bi bi-pause-fill"></i>
+					</button>
+					<button class="warning input3" onclick="timerReset()">
+						<i class="bi bi-arrow-counterclockwise"></i>
+					</button>
+				</div>
+			</div>
+			<div class="inputGroupColumn">
+				<label for="timerCountSelect">Durée</label>
+				<select id="timerCountSelect" onchange="updateTimerCount()">
+					<option value="35" selected>35s</option>
+					<option value="45" selected>45s</option>
+					<option value="50">50s</option>
+					<option value="55">55s</option>
+					<option value="90">1m30</option>
+				</select>
+			</div>
 		</section>
 	</body>
 </html>

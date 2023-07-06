@@ -44,7 +44,7 @@
       },
       {
         "name": "WaitingScreen",
-        "title": "Waiting screen",
+        "title": "Ecran d'attente",
         "width": 4,
         "file": "dashboard-waiting-info/dashboard-waiting-info.html",
         "headerColor": "#525F78",
@@ -55,6 +55,14 @@
         "title": "Informations principal",
         "width": 4,
         "file": "dashboard-run-info/dashboard-run-info.html",
+        "headerColor": "#525F78",
+        "workspace": "SEAN"
+      },
+      {
+        "name": "Planning",
+        "title": "Planning",
+        "width": 4,
+        "file": "dashboard-planning/dashboard-planning.html",
         "headerColor": "#525F78",
         "workspace": "SEAN"
       },

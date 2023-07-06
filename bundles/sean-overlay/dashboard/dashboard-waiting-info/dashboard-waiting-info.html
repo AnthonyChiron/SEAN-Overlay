@@ -27,16 +27,16 @@
 	<body>
 		<section>
 			<div class="inputGroupColumn">
-				<label for="command">Command Waiting Timer</label>
+				<label for="command">Contrôles du timer</label>
 				<div id="command" class="inputGroupRow">
-					<button class="primary" onclick="timerStart()">
-						Start timer
+					<button class="primary input3" onclick="timerStart()">
+						<i class="bi bi-play-fill"></i>
 					</button>
-					<button class="danger" onclick="timerStop()">
-						Stop timer
+					<button class="danger input3" onclick="timerStop()">
+						<i class="bi bi-pause-fill"></i>
 					</button>
-					<button class="warning" onclick="timerReset()">
-						Reset timer
+					<button class="warning input3" onclick="timerReset()">
+						<i class="bi bi-arrow-counterclockwise"></i>
 					</button>
 				</div>
 			</div>
@@ -44,19 +44,25 @@
 		<section>
 			<div class="inputGroupColumn">
 				<label for="labelTimer">Label</label>
-				<select
-					id="labelTimer"
-					class="w2"
-					onchange="updateLabelTimer()"
-				>
-					<option value="Début dans">Début dans</option>
-					<option value="Reprise dans">Reprise dans</option>
-				</select>
+				<div class="inputGroupRow h3">
+					<select
+						id="labelTimer"
+						class="w2"
+						onchange="updateLabelTimer()"
+					>
+						<option value="Début dans">Début dans</option>
+						<option value="Reprise dans">Reprise dans</option>
+					</select>
+				</div>
 			</div>
 			<div class="inputGroupColumn">
-				<label for="timerCountTxt">Timer count</label>
-				<div class="inputGroupRow">
-					<select id="timerCountSelect" onchange="updateTimerCount()">
+				<label for="timerCountTxt">Durée</label>
+				<div class="inputGroupRow h3">
+					<select
+						id="timerCountSelect"
+						class="w2"
+						onchange="updateTimerCount()"
+					>
 						<option value="120" selected>2m</option>
 						<option value="300" selected>5m</option>
 						<option value="600" selected>10m</option>
@@ -64,19 +70,20 @@
 						<option value="1200">20m</option>
 						<option value="1800">30m</option>
 					</select>
+					<p>-</p>
 					<input
-						class="input"
+						class="input w1"
 						id="timerCountTxt"
 						type="number"
-						placeholder="Timer en secondes"
+						placeholder="Timer en s"
 						title="Timer en seconde"
 					/>
 					<button
-						class="primary w2"
+						class="primary w1 input3"
 						id="timerCountTxt"
 						onclick="updateTimerCountFromTxt()"
 					>
-						Update
+						<i class="bi bi-check"></i>
 					</button>
 				</div>
 			</div>

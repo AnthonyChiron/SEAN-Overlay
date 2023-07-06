@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet/less"
+			type="text/css"
+			href="dashboard-planning.scss"
+		/>
+		<link
+			rel="stylesheet/less"
+			type="text/css"
+			href="../../shared/scss/component.scss"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+		<script src="dashboard-planning.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+		/>
+		<title>TIMER</title>
+	</head>
+	<body>
+		<section>
+			<div class="inputGroupColumn">
+				<label for="categorieName">Nom</label>
+				<div class="inputGroupRow h3">
+					<input
+						class="w4"
+						id="categorieName"
+						type="text"
+						placeholder="Nom de la catégorie"
+					/>
+				</div>
+			</div>
+			<div class="inputGroupColumn">
+				<label for="categorieHour">Heure</label>
+				<div class="inputGroupRow h3">
+					<input
+						class="w1"
+						id="categorieHour"
+						type="number"
+						placeholder="hh"
+					/>
+					<p>:</p>
+					<input
+						class="w1"
+						id="categorieMinutes"
+						type="number"
+						placeholder="mm"
+					/>
+					<button class="primary w1 input2" onclick="addCategorie()">
+						<i class="bi bi-plus"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section id="categories"></section>
+	</body>
+</html>

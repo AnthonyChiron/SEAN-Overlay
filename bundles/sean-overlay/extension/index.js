@@ -3,4 +3,5 @@ module.exports = function (nodecg) {
 	require("./streamdeck")(nodecg);
 	require("./timer")(nodecg);
 	require("./communication")(nodecg);
+	require("./planning_handler")(nodecg);
 };
