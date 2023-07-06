@@ -1,21 +1,61 @@
+const { xml } = require("cheerio");
 const uuidv4 = require("uuid/v4");
 
 module.exports = function (nodecg) {
-	const planning = nodecg.Replicant("planning");
-	const newPlanningCategorie = nodecg.Replicant("newPlanningCategorie");
+	const planningReplicant = nodecg.Replicant("planning");
+	const deletePlanningCategorie = nodecg.Replicant("deletePlanningCategorie");
+	const updatePlanningCategorie = nodecg.Replicant("updatePlanningCategorie");
+	const newPlanningCategorie = nodecg.Replicant("newPlanningCategorie", {
+		defaultValue: [],
+		persistent: true,
+	});
 
-	planning.value = [];
-
+	// AJOUT DE CATEGORIE
 	newPlanningCategorie.on("change", (newValue) => {
-		if (newValue) {
-			console.log(newValue);
-
-			newValue.id = uuidv4();
-			planning.value.push(newValue);
+		if (
+			newValue &&
+			newValue.name != "" &&
+			newValue.hour != "" &&
+			newValue.minutes != ""
+		) {
+			let categorie = {
+				id: uuidv4(),
+				name: newValue.name,
+				hour: newValue.hour,
+				minutes: newValue.minutes,
+			};
+			planningReplicant.value.push(categorie);
 		}
 	});
 
-	function deleteCategorie(id) {
-		planning.value();
-	}
+	// SUPPRESSION DE CATEGORIE
+	deletePlanningCategorie.on("change", (newValue) => {
+		let planning = planningReplicant.value;
+		planning.forEach((categorie, index) => {
+			if (categorie.id == newValue) {
+				planning.splice(index, 1);
+			}
+		});
+		planningReplicant.value = planning;
+	});
+
+	// UPDATE CATEGORIE
+	updatePlanningCategorie.on("change", (newValue) => {
+		let planning = [];
+		planningReplicant.value.forEach((categorie) => {
+			let cat = {
+				id: categorie.id,
+				name: categorie.name,
+				hour: categorie.hour,
+				minutes: categorie.minutes,
+			};
+			planning.push(cat);
+			if (cat.id == newValue.id) {
+				cat.name = newValue.name;
+				cat.hour = newValue.hour;
+				cat.minutes = newValue.minutes;
+			}
+		});
+		planningReplicant.value = planning.sort((a, b) => a.hour - b.hour);
+	});
 };

@@ -45,7 +45,6 @@ nodecg.listenFor("nextRiderDash", () => {
 //* Rafraichissement des données
 //*
 riders.on("change", (newValue) => {
-	console.log("a");
 	if (newValue) {
 		document.getElementById("refreshDataBtn").classList.remove("danger");
 
